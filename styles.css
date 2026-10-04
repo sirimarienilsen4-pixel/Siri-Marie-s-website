@@ -12,7 +12,9 @@
   --sage: #87957E;
   --rose: #9B6B5E;
   --line: #D9D0C0;
-  --ph-bg: #F3E4BE;     /* markering av plassholdere */
+  --ph-bg: var(--paper); /* rolig bakgrunn på alle seksjoner */
+  --ph-border: var(--line);
+  --ph-text: var(--ink-soft);
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -69,24 +71,26 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .small-heading { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin: 2.2em 0 0.8em; }
 .section-intro { color: var(--ink-soft); margin-top: -0.6em; }
 
-/* ---------- Plassholdere {{SOM DETTE}} ---------- */
-.ph {
+/* ---------- Plassholdere – bare tomme felt får egen stil ---------- */
+[data-fill].is-placeholder {
   background: var(--ph-bg);
-  box-shadow: 0 0 0 1px rgba(181,137,63,.35) inset;
-  border-radius: 3px;
-  padding: 0.05em 0.35em;
+  border: 1px dashed var(--ph-border);
+  border-radius: 999px;
+  padding: 0.08em 0.5em;
   font-family: var(--sans);
   font-size: 0.82em;
   font-weight: 500;
   letter-spacing: 0.01em;
-  color: #5A4520;
+  color: var(--ph-text);
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
-.ph-block { display: block; padding: 1em 1.1em; margin: 1.2em 0; max-width: 62ch; }
-.ph.is-filled { all: unset; } /* fjernes når verdien er fylt inn fra config.js */
-.ph.is-filled { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
-.brand .ph.is-filled, .footer-brand.ph.is-filled, .hero-name.ph.is-filled { text-decoration: none; cursor: inherit; }
+[data-fill].ph-block.is-placeholder {
+  display: block;
+  border-radius: var(--radius);
+  padding: 1em 1.1em;
+  max-width: 62ch;
+}
 
 /* ---------- Knapper ---------- */
 .btn {
@@ -140,10 +144,9 @@ p { margin: 0 0 1em; max-width: 62ch; }
   content: attr(data-label);
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
   white-space: nowrap;
-  background: var(--ph-bg);
-  box-shadow: 0 0 0 1px rgba(181,137,63,.35) inset;
-  color: #5A4520;
-  border-radius: 3px; padding: 0.3em 0.7em;
+  color: var(--ink-soft);
+  padding: 0.3em 0.7em;
+  letter-spacing: 0.08em;
   font: 500 0.8rem/1.3 var(--sans);
 }
 .portrait { border-radius: var(--radius); }
@@ -272,7 +275,8 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
 .contact-copy .btn { margin-top: 0.8em; }
 .contact-mail { margin-top: 1.8em; color: var(--ink-soft); }
-.booking-missing { margin-top: 1em; display: inline-block; }
+.booking-missing { margin-top: 1em; }
+.booking-missing:not([hidden]) { display: inline-block; }
 .contact-form {
   background: var(--linen) var(--linen-texture);
   border-radius: var(--radius);
@@ -302,12 +306,10 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .footer-brand { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 0.2em; }
 .site-footer p { margin: 0 0 0.4em; }
 .privacy summary { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
-.privacy .ph-block { margin: 0.8em 0 0.6em; }
+.privacy [data-fill] { margin: 0.8em 0 0.6em; }
 .draft-note { font-size: 0.85rem; color: #B9B3A8; }
 .footer-bottom { margin-top: 48px; color: #B9B3A8; font-size: 0.88rem; }
 .footer-bottom p { border-top: 1px solid rgba(255,255,255,.12); padding-top: 24px; max-width: none; }
-.site-footer .ph { color: #5A4520; }
-.footer-brand.ph { display: inline-block; }
 
 /* ============================================================
    Mobil og nettbrett
@@ -351,7 +353,7 @@ p { margin: 0 0 1em; max-width: 62ch; }
   .contact-form .btn { justify-self: stretch; }
   .gallery { gap: 14px; }
   .is-empty::after { font-size: 0.68rem; padding: 0.25em 0.5em; }
-  .ph-block { padding: 0.8em 0.9em; }
+  [data-fill].ph-block.is-placeholder { padding: 0.8em 0.9em; }
 }
 
 @media (prefers-reduced-motion: reduce) {

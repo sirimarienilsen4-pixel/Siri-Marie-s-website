@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Kreativ coaching for deg som står i endring</title>
+  <title data-fill="businessName" data-label="Navn på virksomheten" data-suffix=" – Kreativ coaching for deg som står i endring">Navn på virksomheten – Kreativ coaching for deg som står i endring</title>
   <meta name="description" content="Kreativ coaching for voksne som står i endring. Samtale og kreative øvelser på nett, uten krav til erfaring med maling. Book en gratis introsamtale.">
   <meta name="robots" content="noindex"><!-- Fjern denne linja når siden er godkjent og klar til lansering -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +20,10 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Til toppen">
-      <span class="ph"> </span>
+      <span data-fill="businessName" data-label="Navn på virksomheten"></span>
     </a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="meny">Meny</button>
+    <nav id="meny" class="nav" aria-label="Hovedmeny">
       <a href="#for-deg">For hvem</a>
       <a href="#slik">Slik foregår det</a>
       <a href="#om">Om Siri Marie</a>
@@ -39,7 +40,7 @@
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="hero-name ph"></p>
+      <p class="hero-name" data-fill="businessName" data-label="Navn på virksomheten"></p>
       <h1>Kreativ coaching for deg som står i endring</h1>
       <p class="lead">Når livet endrer retning, er det ikke alltid lett å se neste steg. Gjennom samtale og kreative øvelser utforsker vi situasjonen din på en annen måte, slik at du kan få nye perspektiver og finne veien videre.</p>
       <p class="hero-note">Du trenger ingen erfaring med maling.</p>
@@ -48,7 +49,7 @@
         <span class="micro">Online coaching · Norge</span>
       </div>
     </div>
-    <figure class="canvas canvas-hero" data-label="{{PAINTING 1}}">
+    <figure class="canvas canvas-hero" data-label="Maleri 1">
       <img src="images/painting-1.jpg" alt="Maleri av Siri Marie Nilsen" fetchpriority="high">
     </figure>
   </div>
@@ -118,15 +119,15 @@
       <dl class="todo-list">
         <div>
           <dt>Slik foregår en samtale</dt>
-          <dd class="ph">{{SIRI MARIE: DESCRIBE EXACTLY WHAT HAPPENS DURING A SESSION}}</dd>
+          <dd class="ph-block" data-fill="sessionDescription" data-label="Beskrivelse av samtalen kommer"></dd>
         </div>
         <div>
           <dt>Dette trenger du</dt>
-          <dd class="ph">{{MATERIALS NEEDED}}</dd>
+          <dd class="ph-block" data-fill="materials" data-label="Materialer avklares"></dd>
         </div>
       </dl>
     </div>
-    <figure class="canvas canvas-tall" data-label="{{PAINTING 2}}">
+    <figure class="canvas canvas-tall" data-label="Maleri 2">
       <img src="images/painting-2.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy">
     </figure>
   </div>
@@ -135,13 +136,13 @@
 <!-- ================= 5 OM SIRI MARIE ================= -->
 <section class="section" id="om">
   <div class="wrap about-grid">
-    <figure class="portrait" data-label="{{PORTRAIT OF SIRI MARIE}}">
+    <figure class="portrait" data-label="Portrett">
       <img src="images/portrait.jpg" alt="Portrett av Siri Marie Nilsen" loading="lazy">
     </figure>
     <div class="about-copy">
       <h2>Hei, jeg er Siri Marie</h2>
       <p class="lead">Jeg har gjennom mange år jobbet tett med mennesker i ulike livssituasjoner. I dag kombinerer jeg erfaring fra veiledning, kreativ coaching og min egen interesse for maling i en rolig og utforskende coachingform.</p>
-      <p class="ph ph-block">{{SIRI MARIE'S PERSONAL STORY IN HER OWN WORDS}}</p>
+      <p class="ph-block" data-fill="personalStory" data-label="Min historie kommer"></p>
 
       <h3 class="small-heading">Erfaring og utdanning</h3>
       <ul class="facts">
@@ -171,10 +172,10 @@
         <ul class="included">
           <li>Én-til-én coaching på nett</li>
           <li>Kreative øvelser og maling</li>
-          <li><span class="ph">{{NUMBER OF SESSIONS}}</span> samtaler</li>
+          <li><span data-fill="sessionCount" data-label="Antall avklares"></span> samtaler</li>
           <li>En kort tilbakemelding fra deg til slutt</li>
         </ul>
-        <p class="price">Pilotpris: <span class="ph">{{PRICE TO BE AGREED}}</span></p>
+        <p class="price">Pilotpris: <span data-fill="pilotPrice" data-label="Pris avtales"></span></p>
         <p class="price-note">Introsamtalen er gratis og uforpliktende.</p>
       </div>
     </div>
@@ -187,10 +188,10 @@
     <h2>Et kreativt rom</h2>
     <p class="section-intro">Et utvalg av Siri Maries egne malerier.</p>
     <div class="gallery">
-      <figure class="canvas g-a" data-label="{{PAINTING 3}}"><img src="images/painting-3.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
-      <figure class="canvas g-b" data-label="{{PAINTING 4}}"><img src="images/painting-4.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
-      <figure class="canvas g-c" data-label="{{PAINTING 5}}"><img src="images/painting-5.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
-      <figure class="canvas g-d" data-label="{{PAINTING 6}}"><img src="images/painting-6.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
+      <figure class="canvas g-a" data-label="Maleri 3"><img src="images/painting-3.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
+      <figure class="canvas g-b" data-label="Maleri 4"><img src="images/painting-4.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
+      <figure class="canvas g-c" data-label="Maleri 5"><img src="images/painting-5.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
+      <figure class="canvas g-d" data-label="Maleri 6"><img src="images/painting-6.jpg" alt="Maleri av Siri Marie Nilsen" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -217,23 +218,23 @@
       </details>
       <details>
         <summary>Hvor foregår samtalene?</summary>
-        <div class="answer"><p>Samtalene foregår på nett, så du kan være med uansett hvor i Norge du bor. <span class="ph">{{VIDEO TOOL – SIRI MARIE TO CONFIRM}}</span></p></div>
+        <div class="answer"><p>Samtalene foregår på nett, så du kan være med uansett hvor i Norge du bor. <span data-fill="videoTool" data-label="Videoverktøy avklares"></span></p></div>
       </details>
       <details>
         <summary>Hvor lenge varer en samtale?</summary>
-        <div class="answer"><p class="ph">{{SIRI MARIE TO CONFIRM}}</p></div>
+        <div class="answer"><p data-fill="sessionLength" data-label="Varighet avklares"></p></div>
       </details>
       <details>
         <summary>Hva koster det?</summary>
-        <div class="answer"><p>Introsamtalen er gratis. Pilotpris: <span class="ph">{{PILOT PRICE TO BE AGREED}}</span></p></div>
+        <div class="answer"><p>Introsamtalen er gratis. Pilotpris: <span data-fill="pilotPrice" data-label="Pris avtales"></span></p></div>
       </details>
       <details>
         <summary>Hva trenger jeg av materialer?</summary>
-        <div class="answer"><p class="ph">{{MATERIALS NEEDED}}</p></div>
+        <div class="answer"><p class="ph-block" data-fill="materials" data-label="Materialer avklares"></p></div>
       </details>
       <details>
         <summary>Er samtalene konfidensielle?</summary>
-        <div class="answer"><p class="ph">{{SIRI MARIE TO CONFIRM}}</p></div>
+        <div class="answer"><p class="ph-block" data-fill="confidentiality" data-label="Informasjon om konfidensialitet kommer"></p></div>
       </details>
       <details>
         <summary>Er dette terapi?</summary>
@@ -250,8 +251,8 @@
       <h2>Klar for en uforpliktende prat?</h2>
       <p class="lead">Book en gratis introsamtale, så kan vi sammen finne ut om denne formen for coaching passer for deg.</p>
       <a class="btn btn-large" data-book data-booking-final href="#skjema">Book en gratis introsamtale</a>
-      <p class="booking-missing ph" hidden>{{BOOKING LINK}}</p>
-      <p class="contact-mail">Eller send en e-post til <a data-fill="email" class="ph" href="#kontakt">{{BUSINESS EMAIL}}</a></p>
+      <p class="booking-missing" hidden data-fill="bookingUrl" data-label="Bookinglenke kommer. Bruk kontaktskjemaet nedenfor."></p>
+      <p class="contact-mail">Eller send en e-post til <a href="#kontakt" data-fill="email" data-label="E-postadresse kommer"></a></p>
     </div>
 
     <form class="contact-form" id="skjema" novalidate>
@@ -275,17 +276,17 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <p class="footer-brand ph">{{BUSINESS NAME}}</p>
+      <p class="footer-brand" data-fill="businessName" data-label="Navn på virksomheten"></p>
       <p>Kreativ coaching</p>
     </div>
     <div>
-      <p><a data-fill="email" class="ph" href="#kontakt">{{BUSINESS EMAIL}}</a></p>
-      <p>Instagram: <a data-fill="instagram" class="ph" href="#kontakt">{{INSTAGRAM LINK}}</a></p>
+      <p><a href="#kontakt" data-fill="email" data-label="E-postadresse kommer"></a></p>
+      <p>Instagram: <a href="#kontakt" data-fill="instagramUrl" data-label="Instagram-profil kommer"></a></p>
     </div>
     <div>
       <details class="privacy" id="personvern">
         <summary>Personvern</summary>
-        <p class="ph ph-block">{{PRIVACY PAGE / NOTE}}</p>
+        <p class="ph-block" data-fill="privacyNote" data-label="Personverntekst kommer"></p>
         <p class="draft-note">Utkast, må bekreftes: Opplysningene du sender i kontaktskjemaet eller ved booking (navn, e-post og meldingen din) brukes bare til å svare deg og avtale en samtale.</p>
       </details>
     </div>
