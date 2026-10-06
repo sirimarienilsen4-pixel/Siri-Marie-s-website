@@ -1,0 +1,141 @@
+# Oppsett for Pages CMS (https://pagescms.org)
+# Bestemmer hvilke felt Siri Marie ser i redigeringsverktøyet.
+media:
+  input: images
+  output: /images
+  categories: [image]
+
+content:
+  - name: nettside
+    label: Nettsiden
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: settings
+        label: Navn, kontakt og booking
+        type: object
+        fields:
+          - { name: businessName, label: Navn på virksomheten, type: string, description: "Vises i menyen, toppen av siden og nederst. Tomt felt viser en plassholder." }
+          - { name: tagline, label: Undertittel i fanen i nettleseren, type: string }
+          - { name: ctaLabel, label: Tekst på bookingknappene, type: string }
+          - { name: bookingUrl, label: Bookinglenke, type: string, description: "Full lenke, f.eks. til Calendly. Tomt felt sender knappene til kontaktskjemaet." }
+          - { name: email, label: E-postadresse, type: string }
+          - { name: instagramUrl, label: Instagram-lenke, type: string, description: "Full lenke, f.eks. https://instagram.com/brukernavn" }
+          - { name: formEndpoint, label: Skjemaadresse (teknisk), type: string, description: "Settes opp av Unreal Fund. La stå hvis du er usikker." }
+          - { name: showInGoogle, label: Vis siden i Google, type: boolean, description: "Slå på når siden er klar til lansering." }
+
+      - name: hero
+        label: Toppen av siden
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - { name: intro, label: Innledning, type: text }
+          - { name: note, label: Liten tekst under innledningen, type: string }
+          - { name: micro, label: Tekst ved siden av knappen, type: string }
+          - { name: image, label: Maleri øverst (stående format), type: image }
+
+      - name: forYou
+        label: Kanskje du kjenner deg igjen?
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - name: items
+            label: Situasjoner
+            type: object
+            list: { min: 1, max: 6 }
+            fields:
+              - { name: title, label: Tittel, type: string }
+              - { name: text, label: Tekst, type: text }
+
+      - name: howItWorks
+        label: Slik foregår det
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - name: steps
+            label: Steg
+            type: object
+            list: { min: 1, max: 5 }
+            fields:
+              - { name: title, label: Tittel, type: string }
+              - { name: text, label: Tekst, type: text }
+
+      - name: painting
+        label: Du trenger ikke være kunstner
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - { name: lead, label: Ingress, type: text }
+          - { name: body, label: Brødtekst, type: text, description: "Tom linje mellom avsnitt." }
+          - { name: sessionDescription, label: Slik foregår en samtale, type: text }
+          - { name: materials, label: Dette trenger du (materialer), type: text }
+          - { name: image, label: Maleri i denne delen (stående format), type: image }
+
+      - name: about
+        label: Om meg
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - { name: lead, label: Ingress, type: text }
+          - { name: personalStory, label: Min historie, type: text, description: "Med egne ord. Tom linje mellom avsnitt." }
+          - { name: portrait, label: Portrett (stående format), type: image }
+          - { name: factsTitle, label: Overskrift over erfaring, type: string }
+          - { name: facts, label: Erfaring og utdanning, type: string, list: true }
+
+      - name: pilot
+        label: Pilottilbudet
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - { name: text, label: Tekst, type: text }
+          - { name: includedTitle, label: Overskrift over listen, type: string }
+          - { name: included, label: Dette er inkludert, type: string, list: true }
+          - { name: sessionCount, label: Antall samtaler, type: string, description: "Bare tallet, f.eks. 4" }
+          - { name: price, label: Pilotpris, type: string, description: "Med valuta, f.eks. 1 500 kr" }
+          - { name: priceNote, label: Liten tekst under prisen, type: string }
+
+      - name: gallery
+        label: Galleri
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - { name: intro, label: Innledning, type: string }
+          - { name: images, label: Malerier (3 til 6), type: image, list: { max: 6 } }
+
+      - name: coaching
+        label: Coaching, ikke behandling
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - { name: body, label: Tekst, type: text }
+
+      - name: faq
+        label: Spørsmål og svar
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - name: items
+            label: Spørsmål
+            type: object
+            list: true
+            fields:
+              - { name: question, label: Spørsmål, type: string }
+              - { name: answer, label: Svar, type: text }
+
+      - name: contact
+        label: Kontakt
+        type: object
+        fields:
+          - { name: title, label: Overskrift, type: string }
+          - { name: text, label: Tekst, type: text }
+          - { name: formTitle, label: Overskrift på skjemaet, type: string }
+          - { name: formHint, label: Hjelpetekst i skjemaet, type: text }
+
+      - name: footer
+        label: Bunnen av siden
+        type: object
+        fields:
+          - { name: tagline, label: Tekst under navnet, type: string }
+          - { name: privacyText, label: Personverntekst, type: text }
+          - { name: disclaimer, label: Merknad nederst, type: string }
