@@ -12,7 +12,7 @@
   --sage: #87957E;
   --rose: #9B6B5E;
   --line: #D9D0C0;
-  --ph-bg: var(--paper); /* rolig bakgrunn på alle seksjoner */
+  --ph-bg: var(--linen); /* rolig bakgrunn for tomme felt */
   --ph-border: var(--line);
   --ph-text: var(--ink-soft);
 
@@ -72,7 +72,12 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .section-intro { color: var(--ink-soft); margin-top: -0.6em; }
 
 /* ---------- Plassholdere – bare tomme felt får egen stil ---------- */
-[data-fill].is-placeholder {
+.section-dark, .site-footer {
+  --ph-bg: rgba(236,229,216,.06);
+  --ph-border: rgba(236,229,216,.35);
+  --ph-text: var(--linen);
+}
+.is-placeholder {
   background: var(--ph-bg);
   border: 1px dashed var(--ph-border);
   border-radius: 999px;
@@ -85,7 +90,7 @@ p { margin: 0 0 1em; max-width: 62ch; }
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
   overflow-wrap: anywhere;
 }
-[data-fill].ph-block.is-placeholder {
+.ph-block.is-placeholder {
   display: block;
   border-radius: var(--radius);
   padding: 1em 1.1em;
@@ -306,7 +311,7 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .footer-brand { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 0.2em; }
 .site-footer p { margin: 0 0 0.4em; }
 .privacy summary { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
-.privacy [data-fill] { margin: 0.8em 0 0.6em; }
+.privacy .privacy-text { margin: 0.8em 0 0.6em; }
 .draft-note { font-size: 0.85rem; color: #B9B3A8; }
 .footer-bottom { margin-top: 48px; color: #B9B3A8; font-size: 0.88rem; }
 .footer-bottom p { border-top: 1px solid rgba(255,255,255,.12); padding-top: 24px; max-width: none; }
@@ -353,10 +358,17 @@ p { margin: 0 0 1em; max-width: 62ch; }
   .contact-form .btn { justify-self: stretch; }
   .gallery { gap: 14px; }
   .is-empty::after { font-size: 0.68rem; padding: 0.25em 0.5em; }
-  [data-fill].ph-block.is-placeholder { padding: 0.8em 0.9em; }
+  .ph-block.is-placeholder { padding: 0.8em 0.9em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+/* Galleri med et annet antall enn fire malerier: jevnt rutenett */
+@media (min-width: 961px) {
+  .gallery:not(.gallery-4) .canvas { grid-column: span 4; aspect-ratio: 4 / 5; margin-top: 0; }
+}
+.block-text p:last-child { margin-bottom: 0; }
+.g-e, .g-f { aspect-ratio: 4 / 5; }

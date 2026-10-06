@@ -1,0 +1,104 @@
+{
+  "settings": {
+    "businessName": "",
+    "tagline": "Kreativ coaching for deg som står i endring",
+    "ctaLabel": "Book en gratis introsamtale",
+    "bookingUrl": "",
+    "email": "",
+    "instagramUrl": "",
+    "formEndpoint": "",
+    "showInGoogle": false
+  },
+  "hero": {
+    "title": "Kreativ coaching for deg som står i endring",
+    "intro": "Når livet endrer retning, er det ikke alltid lett å se neste steg. Gjennom samtale og kreative øvelser utforsker vi situasjonen din på en annen måte, slik at du kan få nye perspektiver og finne veien videre.",
+    "note": "Du trenger ingen erfaring med maling.",
+    "micro": "Online coaching · Norge",
+    "image": ""
+  },
+  "forYou": {
+    "title": "Kanskje du kjenner deg igjen?",
+    "items": [
+      { "title": "Karrieren er i endring", "text": "Du vet at du ønsker noe annet, men er usikker på hva som kommer etterpå." },
+      { "title": "En ny livsfase", "text": "Barna har flyttet ut, livet har endret seg, eller et gammelt kapittel er i ferd med å ta slutt." },
+      { "title": "Du føler deg fastlåst", "text": "Du har tenkt på endring lenge, men det er vanskelig å gjøre tankene om til et tydelig neste steg." }
+    ]
+  },
+  "howItWorks": {
+    "title": "Slik foregår det",
+    "steps": [
+      { "title": "Gratis introsamtale", "text": "En kort samtale på nett, der vi finner ut om denne formen for coaching føles riktig for oss begge." },
+      { "title": "Kreative coachingsamtaler", "text": "Samtaler på nett der vi bruker samtale og enkle kreative øvelser for å se situasjonen din fra flere sider." },
+      { "title": "Ditt neste steg", "text": "Målet er at du får et klarere bilde av hvor du står, og hva du ønsker å utforske eller gjøre videre." }
+    ]
+  },
+  "painting": {
+    "title": "Du trenger ikke være kunstner",
+    "lead": "Maling brukes som et verktøy for refleksjon og uttrykk, ikke som et kunstkurs.",
+    "body": "Noen ganger er det lettere å se noe på en ny måte når du ikke bare må forklare det med ord. Maling kan gi deg en annen vei inn til tanker, følelser og muligheter underveis i samtalen.\n\nVi bruker også enkle teknikker for å legge merke til mønstre i hvordan du tenker og snakker, både med andre og med deg selv.\n\nDu trenger ingen erfaring med maling.",
+    "sessionDescription": "",
+    "materials": "",
+    "image": ""
+  },
+  "about": {
+    "title": "Hei, jeg er Siri Marie",
+    "lead": "Jeg har gjennom mange år jobbet tett med mennesker i ulike livssituasjoner. I dag kombinerer jeg erfaring fra veiledning, kreativ coaching og min egen interesse for maling i en rolig og utforskende coachingform.",
+    "personalStory": "",
+    "factsTitle": "Erfaring og utdanning",
+    "facts": [
+      "Bibliotekar siden 2015",
+      "Erfaring fra en skoles rådgivningsgruppe, med veiledning om hverdag, liv og karriere for elever mellom 16 og 22 år",
+      "Underviser i norsk for minoritetsspråklige elever og er med på å drive en ukentlig klubb for dem",
+      "Fullført kurs i kunstcoaching",
+      "Fullført ettårig universitetsstudium i karriereveiledning",
+      "Tar for tiden et nettkurs i NLP (under utdanning)",
+      "Maler selv, og har en egen kunstnerisk praksis"
+    ],
+    "portrait": ""
+  },
+  "pilot": {
+    "title": "Bli med i pilotfasen",
+    "text": "Jeg starter med et lite antall pilotklienter. Som pilotklient får du kreativ coaching til en egen pilotpris, og til gjengjeld ber jeg om en kort tilbakemelding når vi er ferdige.",
+    "includedTitle": "Dette er inkludert",
+    "included": [
+      "Én-til-én coaching på nett",
+      "Kreative øvelser og maling",
+      "En kort tilbakemelding fra deg til slutt"
+    ],
+    "sessionCount": "",
+    "price": "",
+    "priceNote": "Introsamtalen er gratis og uforpliktende."
+  },
+  "gallery": {
+    "title": "Et kreativt rom",
+    "intro": "Et utvalg av Siri Maries egne malerier.",
+    "images": []
+  },
+  "coaching": {
+    "title": "Coaching, ikke behandling",
+    "body": "Kreativ coaching er et rom for refleksjon, nye perspektiver og personlig utvikling. Det er ikke terapi eller helsehjelp, og det er ikke laget for å stille diagnoser eller behandle psykiske lidelser.\n\nTrenger du medisinsk eller psykologisk hjelp, ta kontakt med fastlegen din eller annen relevant helsetjeneste. Ved akutt behov, ring legevakten på 116 117 eller nødnummeret 113."
+  },
+  "faq": {
+    "title": "Spørsmål og svar",
+    "items": [
+      { "question": "Må jeg kunne male?", "answer": "Nei. Du trenger ingen erfaring med maling. Maling brukes som et verktøy for refleksjon og uttrykk, ikke som et kunstkurs." },
+      { "question": "Hvor foregår samtalene?", "answer": "Samtalene foregår på nett, så du kan være med uansett hvor i Norge du bor." },
+      { "question": "Hvor lenge varer en samtale?", "answer": "" },
+      { "question": "Hva koster det?", "answer": "" },
+      { "question": "Hva trenger jeg av materialer?", "answer": "" },
+      { "question": "Er samtalene konfidensielle?", "answer": "" },
+      { "question": "Er dette terapi?", "answer": "Nei. Dette er coaching, ikke terapi eller helsehjelp. Les mer under «Coaching, ikke behandling» lenger opp på siden." }
+    ]
+  },
+  "contact": {
+    "title": "Klar for en uforpliktende prat?",
+    "text": "Book en gratis introsamtale, så kan vi sammen finne ut om denne formen for coaching passer for deg.",
+    "formTitle": "Send en kort melding",
+    "formHint": "Skriv gjerne kort hva du ønsker å snakke om, men ikke del helseopplysninger eller andre sensitive detaljer her."
+  },
+  "footer": {
+    "tagline": "Kreativ coaching",
+    "privacyText": "",
+    "disclaimer": "Coaching erstatter ikke helsehjelp eller behandling."
+  }
+}
