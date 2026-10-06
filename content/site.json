@@ -3,13 +3,18 @@
     "businessName": "test 1",
     "tagline": "Kreativ coaching for deg som står i endring",
     "ctaLabel": "Book en gratis introsamtale",
+    "bookingUrl": "test link 1",
+    "email": "test@test",
+    "instagramUrl": "test",
+    "formEndpoint": "test",
     "showInGoogle": false
   },
   "hero": {
     "title": "Kreativ coaching for deg som står i endring",
     "intro": "Når livet endrer retning, er det ikke alltid lett å se neste steg. Gjennom samtale og kreative øvelser utforsker vi situasjonen din på en annen måte, slik at du kan få nye perspektiver og finne veien videre.",
     "note": "Du trenger ingen erfaring med maling.",
-    "micro": "Online coaching · Norge"
+    "micro": "Online coaching · Norge",
+    "image": "/images/Screenshot 2026-07-01 at 08.50.45.png"
   },
   "forYou": {
     "title": "Kanskje du kjenner deg igjen?",
