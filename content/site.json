@@ -59,8 +59,9 @@
     "body": "Noen ganger er det lettere å se noe på en ny måte når du ikke bare må forklare det med ord. Maling kan gi deg en annen vei inn til tanker, følelser og muligheter underveis i samtalen.\n\nVi bruker også enkle teknikker for å legge merke til mønstre i hvordan du tenker og snakker, både med andre og med deg selv.\n\nDu trenger ingen erfaring med maling."
   },
   "about": {
-    "title": "Hei, jeg er Siri Marie",
-    "lead": "Jeg har gjennom mange år jobbet tett med mennesker i ulike livssituasjoner. I dag kombinerer jeg erfaring fra veiledning, kreativ coaching og min egen interesse for maling i en rolig og utforskende coachingform.",
+    "title": "Hei, mitt navn er Siri Marie",
+    "lead": "Jeg har gjennom mange år jobbet tett med mennesker i ulike livssituasjoner. I dag kombinerer jeg min egen livserfaring, erfaring fra veiledning, kreativ coaching og min egen interesse for maling i en rolig og utforskende coachingform.",
+    "portrait": "/images/Siri Marie fotografi.jpg",
     "factsTitle": "Erfaring og utdanning",
     "facts": [
       "Bibliotekar siden 2015",
@@ -81,11 +82,18 @@
       "Kreative øvelser og maling",
       "En kort tilbakemelding fra deg til slutt"
     ],
+    "sessionCount": "1",
     "priceNote": "Introsamtalen er gratis og uforpliktende."
   },
   "gallery": {
     "title": "Et kreativt rom",
-    "intro": "Et utvalg av Siri Maries egne malerier."
+    "intro": "Et utvalg av Siri Maries egne malerier.",
+    "images": [
+      "/images/Roads 46 x 38 Siri Marie Nilsen.jpg",
+      "/images/A New York minute 40 x 50 Siri Marie Nilsen.jpg",
+      "/images/Kaos  25,5 x 20 Siri Marie Nilsen.jpg",
+      "/images/Wall 30 x 30 Siri Marie Nilsen – Kopi.jpg"
+    ]
   },
   "coaching": {
     "title": "Coaching, ikke behandling",
@@ -103,16 +111,20 @@
         "answer": "Samtalene foregår på nett, så du kan være med uansett hvor i Norge du bor."
       },
       {
-        "question": "Hvor lenge varer en samtale?"
+        "question": "Hvor lenge varer en samtale?",
+        "answer": "1 klokketime "
       },
       {
-        "question": "Hva koster det?"
+        "question": "Hva koster det?",
+        "answer": "1200"
       },
       {
-        "question": "Hva trenger jeg av materialer?"
+        "question": "Hva trenger jeg av materialer?",
+        "answer": "Et mindre lerret, akrylmaling i fargene sort, hvit, gul,rød, blå og grønn\n2 pensler\nEtt hvitt ark, blyant og viskelær"
       },
       {
-        "question": "Er samtalene konfidensielle?"
+        "question": "Er samtalene konfidensielle?",
+        "answer": "Ja, dette er helt konfidensielt."
       },
       {
         "question": "Er dette terapi?",
@@ -128,6 +140,7 @@
   },
   "footer": {
     "tagline": "Kreativ coaching",
+    "privacyText": "Ved bruk av coachingtjenestene som tilbys her behandles personopplysningene du gir fra deg på en trygg og konfidensiell måte. Det blir kun brukt opplysninger som er nødvendige for å kunne følge deg opp. Opplysningene deles ikke med andre uten ditt samtykke, med mindre loven krever det. \n\nDu kan når som helst ta kontakt dersom du ønsker innsyn i retting, eller sletting av dine personopplysninger. \nAll informasjon blir behandlet med respekt og trygghet, og er i tråd med GDPR. ",
     "disclaimer": "Coaching erstatter ikke helsehjelp eller behandling."
   }
 }
