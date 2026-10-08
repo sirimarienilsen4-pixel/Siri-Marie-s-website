@@ -1,6 +1,6 @@
 {
   "settings": {
-    "businessName": "Siri Marie's business",
+    "businessName": "STRETCHED CANVAS",
     "tagline": "Kreativ coaching for deg som står i endring",
     "ctaLabel": "Book en gratis introsamtale",
     "bookingUrl": "test link 1",
@@ -47,6 +47,9 @@
       {
         "title": "Ditt neste steg",
         "text": "Målet er at du får et klarere bilde av hvor du står, og hva du ønsker å utforske eller gjøre videre."
+      },
+      {
+        "title": "your next "
       }
     ]
   },
