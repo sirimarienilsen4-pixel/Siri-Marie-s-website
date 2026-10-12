@@ -165,6 +165,9 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 2em; }
 .micro { color: var(--ink-soft); font-size: 0.92rem; }
 .canvas-hero { aspect-ratio: 4 / 5; }
+/* Med maleri: vis hele bildet i sitt eget format, uten beskjæring */
+.canvas-hero:not(.is-empty) { aspect-ratio: auto; }
+.canvas-hero:not(.is-empty) img { height: auto; display: block; }
 
 /* Én rolig åpning: lerretet "spennes opp" når siden lastes */
 @media (prefers-reduced-motion: no-preference) {
