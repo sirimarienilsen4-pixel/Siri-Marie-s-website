@@ -2,16 +2,16 @@
    Farger og typografi – endre her for å justere hele siden
    ============================================================ */
 :root {
-  --paper: #F7F1E6;     /* varm krem bakgrunn */
-  --linen: #EDDFC9;     /* beige lerret / rolige seksjoner */
-  --ink: #3A2C24;       /* tekst, varm mørkebrun */
-  --ink-soft: #6A5747;  /* sekundær tekst */
-  --fjord: #8A5A43;     /* knapp og mørk seksjon, varm terrakotta-brun */
-  --fjord-deep: #6E4533;
+  --paper: #C1A3A3;     /* støvete rosa bakgrunn */
+  --linen: #F3C5C5;     /* lys rosa / rolige seksjoner */
+  --ink: #2E2020;       /* tekst, mørk brun */
+  --ink-soft: #4A3636;  /* sekundær tekst */
+  --fjord: #694E4E;     /* knapp og mørk seksjon */
+  --fjord-deep: #523C3C;
   --ochre: #B5893F;
   --sage: #87957E;
   --rose: #9B6B5E;
-  --line: #DCC9AE;
+  --line: #886F6F;
   --ph-bg: var(--linen); /* rolig bakgrunn for tomme felt */
   --ph-border: var(--line);
   --ph-text: var(--ink-soft);
@@ -117,7 +117,7 @@ p { margin: 0 0 1em; max-width: 62ch; }
 /* ---------- Toppmeny ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(247,241,230,.92);
+  background: rgba(193,163,163,.92);
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
   transition: border-color .2s;
@@ -200,7 +200,7 @@ p { margin: 0 0 1em; max-width: 62ch; }
 }
 .steps li:not(:last-child)::after {
   content: ""; position: absolute; top: 1.9rem; left: 4.6rem; right: -1.2rem; height: 1px;
-  background: linear-gradient(90deg, var(--fjord) 0, rgba(138,90,67,.15));
+  background: linear-gradient(90deg, var(--fjord) 0, rgba(105,78,78,.15));
 }
 .steps p { color: var(--ink-soft); }
 .cta-center { margin-top: 3.2em; }
@@ -296,8 +296,8 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .contact-form input, .contact-form textarea {
   width: 100%;
   font: inherit; font-size: 16px; color: var(--ink);
-  background: var(--paper);
-  border: 1px solid #D6C2A6; border-radius: 4px;
+  background: #FBF3F3;
+  border: 1px solid #886F6F; border-radius: 4px;
   padding: 0.8em 0.9em; min-height: 52px;
 }
 .contact-form textarea { resize: vertical; }
