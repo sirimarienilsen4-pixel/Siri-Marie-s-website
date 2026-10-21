@@ -1,0 +1,4 @@
+# Oppsett for Netlify: bygger siden fra content/site.json til mappen dist.
+[build]
+  command = "node build.js"
+  publish = "dist"

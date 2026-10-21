@@ -62,27 +62,32 @@
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(epost)) return say("Sjekk at e-postadressen er riktig skrevet.", true);
 
       const endpoint = (form.dataset.endpoint || "").trim();
-      if (endpoint) {
-        say("Sender …");
-        fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({ navn: navn, epost: epost, melding: melding })
-        }).then(function (r) {
-          if (!r.ok) throw new Error();
-          form.reset();
-          say("Takk! Meldingen er sendt. Du får svar på e-post.");
-        }).catch(function () {
-          say("Meldingen ble ikke sendt. Prøv igjen, eller send en e-post direkte.", true);
-        });
-      } else if (email) {
+      // Åpne e-postprogrammet med meldingen klar (reserveløsning).
+      function openMail() {
+        if (!email) return say("Meldingen ble ikke sendt. Prøv igjen senere.", true);
         const subject = encodeURIComponent("Melding fra nettsiden – " + navn);
         const body = encodeURIComponent(melding + "\n\n" + navn + "\n" + epost);
         window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
         say("E-postprogrammet ditt åpnes med meldingen klar til sending.");
-      } else {
-        say("Skjemaet er ikke koblet til ennå.", true);
       }
+      // Egen skjemaadresse (f.eks. Formspree) hvis den er satt, ellers Netlify Forms.
+      const request = /^https?:\/\//.test(endpoint)
+        ? fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify({ navn: navn, epost: epost, melding: melding })
+          })
+        : fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form)).toString()
+          });
+      say("Sender …");
+      request.then(function (r) {
+        if (!r.ok) throw new Error();
+        form.reset();
+        say("Takk! Meldingen er sendt. Du får svar på e-post.");
+      }).catch(openMail);
     });
   }
 

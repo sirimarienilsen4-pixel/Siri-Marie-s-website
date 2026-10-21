@@ -22,7 +22,7 @@ content:
           - { name: bookingUrl, label: Bookinglenke, type: string, description: "Full lenke, f.eks. til Calendly. Tomt felt sender knappene til kontaktskjemaet." }
           - { name: email, label: E-postadresse, type: string }
           - { name: instagramUrl, label: Instagram-lenke, type: string, description: "Full lenke, f.eks. https://instagram.com/brukernavn" }
-          - { name: formEndpoint, label: Skjemaadresse (teknisk), type: string, description: "Settes opp av Unreal Fund. La stå hvis du er usikker." }
+          - { name: formEndpoint, label: Skjemaadresse (teknisk), type: string, description: "Teknisk. La feltet stå tomt, da sendes meldinger via Netlify. La stå hvis du er usikker." }
           - { name: showInGoogle, label: Vis siden i Google, type: boolean, description: "Slå på når siden er klar til lansering." }
 
       - name: hero

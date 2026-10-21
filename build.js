@@ -50,7 +50,9 @@ const email = has(s.email) ? s.email.trim() : "";
 const emailLink = email
   ? `<a href="mailto:${esc(email)}">${esc(email)}</a>`
   : `<span class="is-placeholder">E-postadresse kommer</span>`;
-const insta = has(s.instagramUrl) ? s.instagramUrl.trim() : "";
+const instaRaw = has(s.instagramUrl) ? s.instagramUrl.trim() : "";
+// Godta både full lenke og bare brukernavnet (med eller uten @).
+const insta = !instaRaw || /^https?:\/\//.test(instaRaw) ? instaRaw : "https://www.instagram.com/" + instaRaw.replace(/^@/, "") + "/";
 const instaLink = insta
   ? `<a href="${esc(insta)}" target="_blank" rel="noopener">${esc(insta.replace(/^https?:\/\/(www\.)?instagram\.com\//, "@").replace(/\/$/, ""))}</a>`
   : `<span class="is-placeholder">Instagram-profil kommer</span>`;
@@ -247,8 +249,10 @@ const html = `<!doctype html>
       <p class="contact-mail">Eller send en e-post til ${emailLink}</p>
     </div>
 
-    <form class="contact-form" id="skjema" novalidate data-endpoint="${esc(s.formEndpoint || "")}" data-email="${esc(email)}">
+    <form class="contact-form" id="skjema" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate data-endpoint="${esc(s.formEndpoint || "")}" data-email="${esc(email)}">
       <h3>${esc(contact.formTitle)}</h3>
+      <input type="hidden" name="form-name" value="kontakt">
+      <p class="hp" hidden><label>Ikke fyll ut: <input name="bot-field"></label></p>
       <label for="navn">Navn</label>
       <input id="navn" name="navn" type="text" autocomplete="name" required>
       <label for="epost">E-post</label>
