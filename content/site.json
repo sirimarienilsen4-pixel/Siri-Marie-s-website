@@ -5,7 +5,7 @@
     "ctaLabel": "Book en gratis introsamtale",
     "bookingUrl": "test link 1",
     "email": "stretchedcanvas.no@gmail.com",
-    "instagramUrl": "stretchedcanvas.no",
+    "instagramUrl": "https://www.instagram.com/stretchedcanvas.no/",
     "formEndpoint": "test",
     "showInGoogle": false
   },
