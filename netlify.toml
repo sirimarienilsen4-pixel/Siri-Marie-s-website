@@ -1,4 +1,8 @@
-# Oppsett for Netlify: bygger siden fra content/site.json til mappen dist.
+# Oppsett for Netlify.
+# MIDLERTIDIG: viser "Kommer snart"-siden (mappen kommer-snart).
+# For å vise hele nettsiden igjen: endre til
+#   command = "node build.js"
+#   publish = "dist"
 [build]
-  command = "node build.js"
-  publish = "dist"
+  command = "echo Kommer snart"
+  publish = "kommer-snart"
